@@ -29,14 +29,16 @@ namespace rest_client
 
                 // Get user input (until they enter "quit")
                 string userText = "";
+                string userText2 = "";
                 while (userText.ToLower() != "quit")
                 {
                     Console.WriteLine("Enter some text ('quit' to stop)");
                     userText = Console.ReadLine();
+                    userText2 = Console.ReadLine();
                     if (userText.ToLower() != "quit")
                     {
                         // Call function to detect language
-                        await GetLanguage(userText);
+                        await GetLanguage(userText, userText2);
                     }
 
                 }
@@ -46,7 +48,7 @@ namespace rest_client
                 Console.WriteLine(ex.Message);
             }
         }
-        static async Task GetLanguage(string text)
+        static async Task GetLanguage(string text, string text2)
         {
             // Construct the JSON request body
             try
@@ -59,7 +61,13 @@ namespace rest_client
                             // Each document needs a unique ID and some text
                             new JProperty("id", 1),
                             new JProperty("text", text)
-                    ))));
+                    ),
+                    new JObject(
+                            // Each document needs a unique ID and some text
+                            new JProperty("id", 2),
+                            new JProperty("text", text2)
+                    )
+                    )));
                 
                 // Encode as UTF-8
                 UTF8Encoding utf8 = new UTF8Encoding(true, true);
