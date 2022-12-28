@@ -6,6 +6,9 @@ using System.Net.Http.Headers;
 using System.Web;
 using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using static System.Net.Mime.MediaTypeNames;
+using System.Linq;
 
 namespace rest_client
 {
@@ -28,19 +31,25 @@ namespace rest_client
                 Console.OutputEncoding = Encoding.Unicode;
 
                 // Get user input (until they enter "quit")
+                List<string> allLines = new List<string>();
                 string userText = "";
-                string userText2 = "";
+
                 while (userText.ToLower() != "quit")
                 {
                     Console.WriteLine("Enter some text ('quit' to stop)");
                     userText = Console.ReadLine();
-                    userText2 = Console.ReadLine();
-                    if (userText.ToLower() != "quit")
-                    {
-                        // Call function to detect language
-                        await GetLanguage(userText, userText2);
-                    }
 
+                    bool exit = userText.ToLower() == "quit";
+                    if (exit) break;
+
+                    if (userText.ToLower() != "stop")
+                    {
+                        allLines.Add(userText);
+                    }
+                    else
+                    {
+                        await GetLanguage(allLines);
+                    }
                 }
             }
             catch (Exception ex)
@@ -48,26 +57,20 @@ namespace rest_client
                 Console.WriteLine(ex.Message);
             }
         }
-        static async Task GetLanguage(string text, string text2)
+        static async Task GetLanguage(List<string> inputs)
         {
-            // Construct the JSON request body
             try
             {
-                JObject jsonBody = new JObject(
-                    // Create a collection of documents (we'll only use one, but you could have more)
-                    new JProperty("documents",
-                    new JArray(
-                        new JObject(
-                            // Each document needs a unique ID and some text
-                            new JProperty("id", 1),
-                            new JProperty("text", text)
-                    ),
-                    new JObject(
-                            // Each document needs a unique ID and some text
-                            new JProperty("id", 2),
-                            new JProperty("text", text2)
-                    )
-                    )));
+                var inputJarray = inputs
+                    .Select((inputLine, id) => new JObject()
+                    {
+                       new JProperty("id", id),
+                       new JProperty("text", inputLine)
+                    }).ToArray();
+
+                var jarray = new JArray(inputJarray);
+
+                JObject jsonBody = new JObject(new JProperty("documents", jarray));
                 
                 // Encode as UTF-8
                 UTF8Encoding utf8 = new UTF8Encoding(true, true);
