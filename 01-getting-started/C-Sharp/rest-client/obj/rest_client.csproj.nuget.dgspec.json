@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dell\\OneDrive\\Desktop\\Online Courses\\ML\\Exercise 1\\AI-102-AIEngineer\\01-getting-started\\C-Sharp\\rest-client\\rest_client.csproj": {}
+    "c:\\Users\\Dell\\OneDrive\\Desktop\\Online Courses\\ML\\Exercise 1\\AI-102-AIEngineer\\01-getting-started\\C-Sharp\\rest-client\\rest_client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dell\\OneDrive\\Desktop\\Online Courses\\ML\\Exercise 1\\AI-102-AIEngineer\\01-getting-started\\C-Sharp\\rest-client\\rest_client.csproj": {
+    "c:\\Users\\Dell\\OneDrive\\Desktop\\Online Courses\\ML\\Exercise 1\\AI-102-AIEngineer\\01-getting-started\\C-Sharp\\rest-client\\rest_client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\OneDrive\\Desktop\\Online Courses\\ML\\Exercise 1\\AI-102-AIEngineer\\01-getting-started\\C-Sharp\\rest-client\\rest_client.csproj",
+        "projectUniqueName": "c:\\Users\\Dell\\OneDrive\\Desktop\\Online Courses\\ML\\Exercise 1\\AI-102-AIEngineer\\01-getting-started\\C-Sharp\\rest-client\\rest_client.csproj",
         "projectName": "rest_client",
-        "projectPath": "C:\\Users\\Dell\\OneDrive\\Desktop\\Online Courses\\ML\\Exercise 1\\AI-102-AIEngineer\\01-getting-started\\C-Sharp\\rest-client\\rest_client.csproj",
+        "projectPath": "c:\\Users\\Dell\\OneDrive\\Desktop\\Online Courses\\ML\\Exercise 1\\AI-102-AIEngineer\\01-getting-started\\C-Sharp\\rest-client\\rest_client.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\OneDrive\\Desktop\\Online Courses\\ML\\Exercise 1\\AI-102-AIEngineer\\01-getting-started\\C-Sharp\\rest-client\\obj\\",
+        "outputPath": "c:\\Users\\Dell\\OneDrive\\Desktop\\Online Courses\\ML\\Exercise 1\\AI-102-AIEngineer\\01-getting-started\\C-Sharp\\rest-client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config"

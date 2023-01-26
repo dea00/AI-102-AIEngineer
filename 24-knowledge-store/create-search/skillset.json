@@ -4,7 +4,7 @@
     "cognitiveServices": {
         "@odata.type": "#Microsoft.Azure.Search.CognitiveServicesByKey",
         "description": "cognitive services",
-        "key": "YOUR_COGNITIVE_SERVICES_KEY"
+        "key": "7705d40cb0c541618ab79b2a4be77f15"
       },
     "skills": [
       {
@@ -259,7 +259,7 @@
         }
     ],
     "knowledgeStore": { 
-      "storageConnectionString": "YOUR_CONNECTION_STRING", 
+      "storageConnectionString": "DefaultEndpointsProtocol=https;AccountName=storage283479;AccountKey=PJtyP4RvXSbp+pfe4Wgnl9iGDxLLdey0sy21bZAr3YXOLiUUqOo1ui5PzJDLoL5ofRT0jQ/k3OzR+ASt+NQ4gQ==;EndpointSuffix=core.windows.net", 
       "projections": [
           {
               "objects": [

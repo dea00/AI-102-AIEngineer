@@ -1,8 +1,8 @@
 @echo off
 
 rem Set values for your Search service
-set url=YOUR_SEARCH_URL
-set admin_key=YOUR_ADMIN_KEY
+set url=https://cognitive-search-92834.search.windows.net
+set admin_key=2ZFaErZrbssmTEXdCbMpYHeHk61uLAO0SK7c8QWYFEAzSeDUnN1k
 
 echo -----
 echo Creating the data source...

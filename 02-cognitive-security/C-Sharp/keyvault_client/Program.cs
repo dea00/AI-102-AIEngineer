@@ -45,7 +45,6 @@ namespace keyvault_client
                         string language = GetLanguage(userText);
                         Console.WriteLine("Language: " + language);
                     }
-
                 }
             }
             catch (Exception ex)
